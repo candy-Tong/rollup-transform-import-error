@@ -1,0 +1,12 @@
+{
+	"scripts": {
+		"build:abc": "rollup src/abc.ts --file dist/abc.js --format cjs",
+		"build:index": "rollup src/index.ts --file dist/index.js --format cjs --external ./abc",
+		"run:node":"npm run build:abc && npm run build:index && node dist/index.js",
+		"run:tsx": "tsx src/index.ts"
+	},
+	"dependencies": {
+		"rollup": "^3.17.2",
+		"tsx": "latest"
+	}
+}
