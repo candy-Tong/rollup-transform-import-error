@@ -1,12 +1,18 @@
 {
+	"type": "module",
 	"scripts": {
 		"build:abc": "rollup src/abc.ts --file dist/abc.js --format cjs",
-		"build:index": "rollup src/index.ts --file dist/index.js --format cjs --external ./abc",
-		"run:node":"npm run build:abc && npm run build:index && node dist/index.js",
-		"run:tsx": "tsx src/index.ts"
+		"build:index": "rollup src/index.ts --file dist/index.js --format cjs --external ./abc --interop default",
+		"run:node": "npm run build:abc && npm run build:index && node dist/index.js",
+		"run:tsx": "tsx src/index.js"
 	},
 	"dependencies": {
-		"rollup": "^3.17.2",
-		"tsx": "latest"
+		"@rollup/plugin-commonjs": "^24.0.1",
+		"@rollup/plugin-typescript": "^11.0.0",
+		"@types/node": "^18.14.1",
+		"rollup": "^3.17.3",
+		"tslib": "^2.5.0",
+		"tsx": "latest",
+		"typescript": "^4.9.5"
 	}
 }
