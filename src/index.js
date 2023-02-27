@@ -1,6 +1,6 @@
 import test,{a} from './abc'
 
-console.log(test,a,123)
+console.log(test,a)
 
 export default test
 export {a}
