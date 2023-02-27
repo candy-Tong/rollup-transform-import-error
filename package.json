@@ -1,5 +1,4 @@
 {
-	"type": "module",
 	"scripts": {
 		"build:abc": "rollup src/abc.ts --file dist/abc.js --format cjs",
 		"build:index": "rollup src/index.ts --file dist/index.js --format cjs --external ./abc --interop default",
